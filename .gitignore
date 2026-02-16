@@ -1,4 +1,5 @@
-*.json
+Timetables.json
+librus.json
 *.ical
 __pycache__/
 .DS_Store
