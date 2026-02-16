@@ -2,6 +2,15 @@
     "manifest_version": 3,
     "name": "Librus iCal Exporter",
     "version": "1.0",
+    "icons": {
+        "128": "icons/icon128.png"
+    },
+    "author": "Antigravity",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "librus-ical-exporter@antigravity.ai"
+        }
+    },
     "description": "Export Librus Synergy timetable to iCal format.",
     "permissions": [
         "activeTab",
