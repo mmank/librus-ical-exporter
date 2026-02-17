@@ -18,8 +18,7 @@
     "content_scripts": [
         {
             "matches": [
-                "https://synergia.librus.pl/gateway/ms/studentdatapanel/ui/lekcje/plan-lekcji*",
-                "https://synergia.librus.pl/terminarz*"
+                "https://synergia.librus.pl/gateway/ms/studentdatapanel/ui/lekcje/plan-lekcji*"
             ],
             "js": [
                 "content.js"

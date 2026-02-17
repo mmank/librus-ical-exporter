@@ -58,20 +58,8 @@ function generateICal(lessonsData, classrooms) {
 function injectButton() {
     if (document.getElementById('ical-export-btn')) return;
 
-    let targetElement = null;
-    let insertionMethod = 'append';
-
-    if (window.location.href.includes('plan-lekcji')) {
-        targetElement = document.querySelector('button.purple_button');
-        insertionMethod = 'after';
-    } else if (window.location.href.includes('terminarz')) {
-        // Find a suitable spot on the Terminarz page
-        // Usually there are filter buttons or title headers
-        targetElement = document.querySelector('.navigation-container') || document.querySelector('h2');
-        insertionMethod = 'append';
-    }
-
-    if (!targetElement) return;
+    const printBtn = document.querySelector('button.purple_button');
+    if (!printBtn) return;
 
     const exportBtn = document.createElement('button');
     exportBtn.id = 'ical-export-btn';
@@ -132,11 +120,7 @@ function injectButton() {
         }
     };
 
-    if (insertionMethod === 'after') {
-        targetElement.parentNode.insertBefore(exportBtn, targetElement.nextSibling);
-    } else {
-        targetElement.appendChild(exportBtn);
-    }
+    printBtn.parentNode.insertBefore(exportBtn, printBtn.nextSibling);
 }
 
 // Observe for DOM changes to inject button (it's a React app)
