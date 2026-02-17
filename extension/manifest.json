@@ -12,10 +12,6 @@
         }
     },
     "description": "Export Librus Synergy timetable to iCal format.",
-    "permissions": [
-        "activeTab",
-        "downloads"
-    ],
     "host_permissions": [
         "https://synergia.librus.pl/*"
     ],
